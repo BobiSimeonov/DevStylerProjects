@@ -135,7 +135,6 @@ void problem4(){
     cout << "The minimum value is: " << minVal1 << endl;
 }
 
-void problem6(){}
 
 int main(){
 
@@ -143,9 +142,6 @@ int main(){
     // problem2();
     // problem3();
     // problem4();
-    // problem5();
-    problem6();
-
     
     return 0;
 }

@@ -10,6 +10,6 @@ int main(){
         }
         sum += i;
     }
-    cout << "The sum of the chosen intigers is: " << sum;
+    cout << "The sum of the chosen integers is: " << sum;
     return 0;
 }

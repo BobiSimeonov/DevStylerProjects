@@ -15,7 +15,11 @@ void problem3(){}
 // the months that have friday the 13th in it.
 
 void problem4(){}
-
+// We have a street with houses on both sides. The houses' numbers are divided: even on one siede,
+// odd at the other. User inputs the starting number of the first house and the amount of total
+// number of houses. The house's number plates consists of single digits: For example a house
+// with number 11, needs to plates of 1. The program prints out how many plates of each digit
+// we need to cover all houses on the street.
 
 int main(){
 

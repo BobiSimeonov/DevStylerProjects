@@ -44,6 +44,8 @@ int main(){
 }
 
 
+
+// Defining an irray, with user-inputted length
 // int n;
 // cin >> n;
 

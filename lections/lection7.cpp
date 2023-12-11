@@ -118,15 +118,6 @@ void problem3(){
     }
 }
 
-void problem4(){
-    cout << "     Problem 4:" << endl;
-
-}
-
-void problem5(){
-    cout << "     Problem 5:" << endl;
-
-}
 
 int main(){
     // Declaring a nested array:
@@ -147,7 +138,5 @@ int main(){
     // problem1();
     // problem2();
     problem3();
-    problem4();
-    problem5();
     return 0;
 }
