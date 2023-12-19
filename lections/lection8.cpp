@@ -144,12 +144,50 @@ void problem3(){
 
 }
 
-void problem4(){}
-// We have a street with houses on both sides. The houses' numbers are divided: even on one siede,
+void problem4(){
+// We have a street with houses on both sides. The houses' numbers are divided: even on one side,
 // odd at the other. User inputs the starting number of the first house and the amount of total
-// number of houses. The house's number plates consists of single digits: For example a house
+// number of houses (on one side). The house's number plates consists of single digits: For example a house
 // with number 11, needs to plates of 1. The program prints out how many plates of each digit
 // we need to cover all houses on the street.
+
+int total_number_of_plates = 0;
+int number_ones = 0;
+int number_two = 0;
+int number_three = 0;
+int number_four = 0;
+int number_five = 0;
+int number_six = 0;
+int number_sever = 0;
+int number_eight = 0;
+int number_nine = 0;
+int number_zero = 0;
+int starting_house = 0;
+cout << "Enter the number of the first house: ";
+cin >> starting_house;
+int final_house_number = 0;
+cout << "Enter the number of the last house: ";
+cin >> final_house_number;
+int number_of_digits = 0;
+int temp_final_house = final_house_number;
+
+
+if (final_house_number < starting_house){
+    cout << "The number of the last house, should be higher than the number of the initial house." << endl;
+    return;
+}
+
+do {                                        // This do_while loop gets the number of digits in the number of the last house.
+    number_of_digits++;
+    temp_final_house /= 10;
+} while (temp_final_house != 0);
+
+
+
+for (int i = 0; i < final_house_number + 2; i += 2){
+}
+}
+
 
 int main(){
     
