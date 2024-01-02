@@ -4,54 +4,41 @@
 
 using namespace std;
 
-struct MakePair{
-    int number_of_duplicates;
-    vector<int> newArray;
-};
-
 class Solution {
 public:
-    MakePair removeElement(vector<int> nums, int val) {
-        vector<int> newArr;
-        int different_numbers = 0;
-        for (int i = 0; i < size(nums); i++){
-            if (nums[i] != val){
-                newArr.push_back(nums[i]);
-                different_numbers++;
+    int removeElement(vector<int>& nums, int val) {
+        int counter = 0;
+        int index = 0;
+        int loop_limit = nums.size();
+        for (int i = 0; i < loop_limit; i++){
+            if (nums[index] != val){
+                counter++;
+                index++;
+            } else {
+                nums.erase(nums.begin() + index);   
             }
         }
-        MakePair result;
-        result.newArray = newArr;
-        result.number_of_duplicates = different_numbers;
-        return result;
+        return counter;
     }
 };
-
 
 int main(){
     Solution solution;
-    // Test 1
+
+    // Test 1:
     cout << "Test 1:" << endl;
     vector<int> nums = {3, 2, 2, 3};
-    int val = 3;
-    
-    MakePair newLength = solution.removeElement(nums, val);
-    cout << "Modified vector: ";
-    for (int i = 0; i < newLength.newArray.size(); ++i) {
-        cout << newLength.newArray[i] << " ";
+    int value_to_eliminate = 3;
+
+    int quantity_different_values = solution.removeElement(nums, value_to_eliminate);
+    cout << "The amount of different values is: " << quantity_different_values << endl;
+    cout << "The modified array is:" << endl << "[";
+    for (int i = 0; i < nums.size(); i++){
+        cout << nums[i];
+        if (i != nums.size()-1){
+            cout << " ";
+        }
     }
-    cout << endl << "Count of the element matching the val: " << newLength.number_of_duplicates << endl;
-    
-    // Test 2
-    cout << endl << "Test 2:" << endl;
-    nums = {0,1,2,2,3,0,4,2};
-    val = 2;
-    
-    newLength = solution.removeElement(nums, val);
-    cout << "Modified vector: ";
-    for (int i = 0; i < newLength.newArray.size(); ++i) {
-        cout << newLength.newArray[i] << " ";
-    }
-    cout << endl << "Count of the element matching the val: " << newLength.number_of_duplicates << endl;
+    cout << "]" << endl << endl;
     return 0;
 }
