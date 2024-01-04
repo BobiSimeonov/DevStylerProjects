@@ -96,7 +96,9 @@ int main(){
     string three = one.append(two);     // The append method also concatanates strings, the same as the "+".
     cout << three << endl;              // However it is the better to use append, rather than "+", as the
                                         // "+" requires the creation of a new string, each time it is used. Hence
-                                        // it is far more memory and time eficient to use "append".
+                                        // it is far more memory and time eficient to use "append". However
+                                        // "append" can add strings, but not chars
+    three.push_back('i');               // Use push_back to append with a char
 
     int indexy = two.find("ai");        // Returns the index of the first apperance of "ai" in two (the whole string)
     int index = two.find_first_of("ai");// Looks for the first apperance of "a" or "i" in two. Can add an extra parameter, to instruct
@@ -111,9 +113,3 @@ int main(){
     
     return 0;
 }
-
-// Chete strings ot klaviaturata i go izprintva otzad napred
-// vavedi izrechenie ot klaviaturata, izvedi kolko pati se sre]a vsqka glasna
-// napravi i dvete kato funkcii
-
-// napravi funkciq, koqto namira i vrashta maksimalnoto ot tri chisla. V main printi varnatoto chislo
